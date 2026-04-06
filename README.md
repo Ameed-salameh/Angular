@@ -24,29 +24,55 @@ MyStore is a single-page e-commerce web application built with Angular. It allow
 
 ## Installation and Run
 
-1. Install dependencies:
+1. Move to the Angular app folder:
+
+```bash
+cd MyStore
+```
+
+2. Install dependencies:
 
 ```bash
 npm install
 ```
 
-2. Start the app:
+3. Start the app:
 
 ```bash
 ng serve
 ```
 
-3. Open in browser:
+4. Open in browser:
 
 ```text
 http://localhost:4200/
 ```
 
-## Available Scripts
+## Notes
 
-- `npm start` or `ng serve`: run development server
-- `npm run build` or `ng build`: production build
-- `npm test` or `ng test`: run unit tests
+If `ng` is not recognized in your terminal, install Angular CLI globally:
+
+```bash
+npm install -g @angular/cli
+```
+
+You can also run the development server using npm scripts:
+
+```bash
+npm start
+```
+
+## Available Scripts (inside MyStore)
+
+- `npm start`: run development server
+- `npm run build`: production build
+- `npm test`: run unit tests
+
+If Angular CLI is installed globally, you can also use:
+
+- `ng serve`
+- `ng build`
+- `ng test`
 
 ## Project Notes
 
