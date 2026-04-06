@@ -10,6 +10,15 @@ h2 {
   color: #2e2419;
 }
 
+.feedback {
+  margin: 10px 0 14px;
+  padding: 10px 12px;
+  border-radius: 8px;
+  background: #f8eee0;
+  color: #5e442a;
+  border: 1px solid #e8d3b8;
+}
+
 .cart-items {
   display: grid;
   gap: 14px;

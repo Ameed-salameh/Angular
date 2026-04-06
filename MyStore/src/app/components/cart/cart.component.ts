@@ -12,12 +12,14 @@ import { CartItem, CartService } from '../../services/cart.service';
 export class CartComponent implements OnInit, OnDestroy {
   cartItems: CartItem[] = [];
   totalCost = 0;
+  feedbackMessage = '';
 
   fullName = '';
   address = '';
   creditCard = '';
 
   private cartSubscription?: Subscription;
+  private feedbackTimeoutId?: ReturnType<typeof setTimeout>;
 
   constructor(
     private readonly cartService: CartService,
@@ -33,6 +35,9 @@ export class CartComponent implements OnInit, OnDestroy {
 
   ngOnDestroy(): void {
     this.cartSubscription?.unsubscribe();
+    if (this.feedbackTimeoutId) {
+      clearTimeout(this.feedbackTimeoutId);
+    }
   }
 
   onQuantityChange(item: CartItem, rawQuantity: string): void {
@@ -41,7 +46,20 @@ export class CartComponent implements OnInit, OnDestroy {
   }
 
   removeItem(productId: number): void {
+    const removedItem = this.cartItems.find((item) => item.product.id === productId);
     this.cartService.removeProduct(productId);
+
+    if (!removedItem) {
+      return;
+    }
+
+    this.feedbackMessage = `${removedItem.product.name} was removed from your cart.`;
+    if (this.feedbackTimeoutId) {
+      clearTimeout(this.feedbackTimeoutId);
+    }
+    this.feedbackTimeoutId = setTimeout(() => {
+      this.feedbackMessage = '';
+    }, 2200);
   }
 
   checkout(valid: boolean | null): void {
