@@ -1,0 +1,57 @@
+.details {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+  background: #ffffff;
+  border: 1px solid #dfd4c2;
+  border-radius: 16px;
+  padding: 20px;
+}
+
+img {
+  width: 100%;
+  border-radius: 12px;
+  min-height: 260px;
+  object-fit: cover;
+}
+
+.back {
+  text-decoration: none;
+  color: #8a2f16;
+  font-weight: 600;
+}
+
+h2 {
+  margin: 10px 0;
+  color: #2f2418;
+}
+
+.price {
+  font-size: 24px;
+  color: #c35a2f;
+  margin: 0;
+}
+
+.description {
+  color: #4c3c2b;
+}
+
+button {
+  border: none;
+  border-radius: 10px;
+  background: #2f6d57;
+  color: #ffffff;
+  padding: 10px 16px;
+  cursor: pointer;
+}
+
+.feedback {
+  color: #2f6d57;
+  font-weight: 600;
+}
+
+@media (max-width: 900px) {
+  .details {
+    grid-template-columns: 1fr;
+  }
+}

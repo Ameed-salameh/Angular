@@ -1,0 +1,6 @@
+<section class="confirmation-card">
+  <h2>Order Successful</h2>
+  <p>Thank you, {{ fullName }}. Your order has been placed successfully.</p>
+  <p class="total">Final total: {{ totalCost | currency: 'USD' }}</p>
+  <a routerLink="/">Continue shopping</a>
+</section>

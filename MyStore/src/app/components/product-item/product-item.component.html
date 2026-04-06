@@ -1,0 +1,13 @@
+<article class="product-card">
+  <img class="product-image" [src]="product.imageUrl" [alt]="product.name" />
+  <div class="product-meta">
+    <span class="category">{{ product.category }}</span>
+    <h3>{{ product.name }}</h3>
+    <p class="price">{{ product.price | currency: 'USD' }}</p>
+  </div>
+
+  <div class="actions">
+    <a class="details-link" [routerLink]="['/products', product.id]">View details</a>
+    <button type="button" (click)="onAddToCart()">Add to cart</button>
+  </div>
+</article>

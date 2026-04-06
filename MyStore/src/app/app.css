@@ -1,0 +1,59 @@
+:host {
+	display: block;
+}
+
+.app-shell {
+	min-height: 100vh;
+}
+
+.site-header {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	gap: 16px;
+	padding: 18px 24px;
+	border-bottom: 1px solid #dfd3c0;
+	background: #fffaf1;
+	position: sticky;
+	top: 0;
+	z-index: 3;
+}
+
+.brand {
+	text-decoration: none;
+	color: #2a2117;
+	font-size: 28px;
+	font-weight: 700;
+	letter-spacing: 0.4px;
+}
+
+.nav-links {
+	display: flex;
+	gap: 8px;
+}
+
+.nav-links a {
+	text-decoration: none;
+	color: #674f38;
+	font-weight: 600;
+	padding: 8px 12px;
+	border-radius: 8px;
+}
+
+.nav-links a.active {
+	background: #f3e2bf;
+	color: #3f3021;
+}
+
+.content {
+	max-width: 1100px;
+	margin: 0 auto;
+	padding: 24px 18px 36px;
+}
+
+@media (max-width: 700px) {
+	.site-header {
+		flex-direction: column;
+		align-items: flex-start;
+	}
+}

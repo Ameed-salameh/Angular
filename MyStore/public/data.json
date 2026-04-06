@@ -1,0 +1,50 @@
+[
+  {
+    "id": 1,
+    "name": "Amber Table Lamp",
+    "price": 49.99,
+    "description": "A warm ambient lamp with woven texture, perfect for bedside or reading corners.",
+    "imageUrl": "https://images.unsplash.com/photo-1513506003901-1e6a229e2d15?auto=format&fit=crop&w=900&q=80",
+    "category": "Lighting"
+  },
+  {
+    "id": 2,
+    "name": "Nordic Wall Clock",
+    "price": 32.5,
+    "description": "Minimal wall clock with silent movement and natural wood frame.",
+    "imageUrl": "https://images.unsplash.com/photo-1507646227500-4d389b0012be?auto=format&fit=crop&w=900&q=80",
+    "category": "Decor"
+  },
+  {
+    "id": 3,
+    "name": "Ceramic Pour-Over Set",
+    "price": 28,
+    "description": "A handcrafted coffee dripper and mug combo for your morning ritual.",
+    "imageUrl": "https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?auto=format&fit=crop&w=900&q=80",
+    "category": "Kitchen"
+  },
+  {
+    "id": 4,
+    "name": "Leaf Cotton Cushion",
+    "price": 19.99,
+    "description": "Soft cotton cushion with botanical print to refresh your sofa setup.",
+    "imageUrl": "https://images.unsplash.com/photo-1582582429416-cf4f92b9f2f0?auto=format&fit=crop&w=900&q=80",
+    "category": "Living Room"
+  },
+  {
+    "id": 5,
+    "name": "Marble Cutting Board",
+    "price": 24.75,
+    "description": "Elegant marble board for serving cheese, fruit, and appetizer spreads.",
+    "imageUrl": "https://images.unsplash.com/photo-1505575967455-40e256f73376?auto=format&fit=crop&w=900&q=80",
+    "category": "Kitchen"
+  },
+  {
+    "id": 6,
+    "name": "Linen Storage Basket",
+    "price": 21.49,
+    "description": "Foldable storage basket made from linen fabric to keep spaces tidy.",
+    "imageUrl": "https://images.unsplash.com/photo-1616627561950-9f746e330187?auto=format&fit=crop&w=900&q=80",
+    "category": "Organization"
+  }
+]

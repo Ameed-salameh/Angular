@@ -1,0 +1,40 @@
+.hero {
+  background: linear-gradient(110deg, #f3e3c6, #fcefd7);
+  border-radius: 20px;
+  padding: 22px;
+  margin-bottom: 18px;
+}
+
+.hero h1 {
+  margin: 0;
+  font-size: 32px;
+  color: #36281b;
+}
+
+.hero p {
+  margin: 8px 0 0;
+  color: #6a5139;
+}
+
+.feedback {
+  background: #2f6d57;
+  color: #ffffff;
+  padding: 10px 14px;
+  border-radius: 10px;
+  margin: 12px 0;
+}
+
+.status {
+  margin: 14px 0;
+  color: #4a3b2c;
+}
+
+.error {
+  color: #b6431f;
+}
+
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  gap: 18px;
+}

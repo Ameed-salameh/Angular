@@ -1,0 +1,66 @@
+<section class="cart-layout">
+  <h2>Your Shopping Cart</h2>
+
+  <p *ngIf="cartItems.length === 0">Your cart is currently empty.</p>
+
+  <div class="cart-items" *ngIf="cartItems.length > 0">
+    <article class="cart-row" *ngFor="let item of cartItems">
+      <img [src]="item.product.imageUrl" [alt]="item.product.name" />
+      <div class="info">
+        <h3>{{ item.product.name }}</h3>
+        <p>{{ item.product.price | currency: 'USD' }} each</p>
+      </div>
+      <label>
+        Qty
+        <input
+          min="1"
+          type="number"
+          [ngModel]="item.quantity"
+          (ngModelChange)="onQuantityChange(item, $event)" />
+      </label>
+      <p class="line-total">{{ item.product.price * item.quantity | currency: 'USD' }}</p>
+      <button type="button" class="remove" (click)="removeItem(item.product.id)">Remove</button>
+    </article>
+  </div>
+
+  <p class="grand-total">Total: {{ totalCost | currency: 'USD' }}</p>
+
+  <form #checkoutForm="ngForm" (ngSubmit)="checkout(checkoutForm.valid)">
+    <h3>Checkout</h3>
+
+    <label>
+      Full Name
+      <input
+        name="fullName"
+        required
+        minlength="3"
+        [(ngModel)]="fullName"
+        #nameField="ngModel" />
+      <small *ngIf="nameField.invalid && nameField.touched">Name must be at least 3 characters.</small>
+    </label>
+
+    <label>
+      Address
+      <input
+        name="address"
+        required
+        minlength="10"
+        [(ngModel)]="address"
+        #addressField="ngModel" />
+      <small *ngIf="addressField.invalid && addressField.touched">Address must be at least 10 characters.</small>
+    </label>
+
+    <label>
+      Credit Card
+      <input
+        name="creditCard"
+        required
+        pattern="[0-9]{16}"
+        [(ngModel)]="creditCard"
+        #cardField="ngModel" />
+      <small *ngIf="cardField.invalid && cardField.touched">Enter a 16-digit card number.</small>
+    </label>
+
+    <button type="submit" [disabled]="checkoutForm.invalid || cartItems.length === 0">Place order</button>
+  </form>
+</section>

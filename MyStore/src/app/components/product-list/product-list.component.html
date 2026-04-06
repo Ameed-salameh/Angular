@@ -1,0 +1,16 @@
+<section class="hero">
+  <h1>Fresh Picks for Everyday Living</h1>
+  <p>Browse curated home essentials, then add your favorites to cart in one click.</p>
+</section>
+
+<p class="feedback" *ngIf="feedbackMessage">{{ feedbackMessage }}</p>
+<p class="status" *ngIf="loading">Loading products...</p>
+<p class="status error" *ngIf="errorMessage">{{ errorMessage }}</p>
+
+<section class="product-grid" *ngIf="!loading && !errorMessage">
+  <app-product-item
+    *ngFor="let product of products"
+    [product]="product"
+    (addToCart)="onProductAdded($event)">
+  </app-product-item>
+</section>
