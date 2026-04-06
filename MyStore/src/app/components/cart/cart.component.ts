@@ -44,7 +44,7 @@ export class CartComponent implements OnInit, OnDestroy {
     this.cartService.removeProduct(productId);
   }
 
-  checkout(valid: boolean): void {
+  checkout(valid: boolean | null): void {
     if (!valid || this.cartItems.length === 0) {
       return;
     }
